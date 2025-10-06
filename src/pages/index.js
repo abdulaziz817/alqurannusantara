@@ -1,20 +1,14 @@
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import SearchHit from "@/components/SearchHit";
-import Head from "next/head";
+// src/pages/index.js
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Home — Quran Digital</title>
-      </Head>
-      <main className="bg-base-200 min-h-screen">
-        <Navbar />
-        <Hero />
-        <SearchHit />
-      </main>
-    </>
-  )
+export default function RedirectToSplash() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Langsung arahkan ke /splashscreen saat halaman / dibuka
+    router.replace("/splashscreen");
+  }, [router]);
+
+  return null; // kosong, karena langsung redirect
 }

@@ -23,7 +23,7 @@ export default function Surah() {
       <>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>{data.nama.latin} — Quran Digital</title>
+          <title>{data.nama.latin} — Al-Qur’an Digital Nusantara</title>
         </Head>
         <main className={outfit.className}>
           <Navbar />
