@@ -1,4 +1,4 @@
-import { BsInstagram } from "react-icons/bs";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -12,13 +12,15 @@ export default function Navbar() {
           Al-Qur’an Digital Nusantara
         </Link>
       </div>
-      <div className="flex-none">
+
+      <div className="flex-none flex items-center space-x-4 mr-5">
+        {/* Ikon Tentang */}
         <Link
-          href="https://www.instagram.com/abdulaziz.nusantara/"
-          target="_blank"
-          className="mr-5"
+          href="/tentang"
+          className="hover:scale-110 transition-transform duration-200"
+          title="Tentang Website"
         >
-          <BsInstagram className="w-6 h-6 text-gray-800 hover:text-pink-500 transition-colors duration-200" />
+          <AiOutlineInfoCircle className="w-6 h-6 text-gray-800 hover:text-indigo-600 transition-colors duration-200" />
         </Link>
       </div>
     </div>
