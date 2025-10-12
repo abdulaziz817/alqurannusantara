@@ -5,14 +5,13 @@ import { Book } from "lucide-react";
 
 export default function SplashScreen({ onFinish }) {
   useEffect(() => {
-    // Getaran lembut jika didukung
     if ("vibrate" in navigator) {
       navigator.vibrate(50);
     }
 
     const timer = setTimeout(() => {
       onFinish && onFinish();
-    }, 3000); // lebih smooth 3 detik
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
@@ -53,14 +52,15 @@ export default function SplashScreen({ onFinish }) {
         <Book size={72} className="text-indigo-600 drop-shadow-lg" />
       </motion.div>
 
-      {/* Nama aplikasi dengan animasi typing-like */}
+      {/* Nama aplikasi */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="text-3xl font-semibold text-gray-800 mt-4 tracking-wider"
+        className="text-3xl font-bold font-sans text-gray-800 mt-4 tracking-wider text-center"
       >
-        Qur’an Digital
+        Al-Qur’an Digital <br />
+        <span className="text-indigo-600">Nusantara</span>
       </motion.h1>
 
       {/* Subteks dengan transisi lembut */}

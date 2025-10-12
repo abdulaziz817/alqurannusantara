@@ -40,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl font-bold mb-3 text-gray-900"
           >
-            Qur’an Digital
+            Al-Qur’an Digital
           </motion.h1>
 
           {/* TEKS BERGANTI */}
