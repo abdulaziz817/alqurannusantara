@@ -73,14 +73,15 @@ export default function Tentang() {
             <h1 className="text-3xl sm:text-4xl font-bold text-indigo-700 mb-3">
               Tentang Aplikasi
             </h1>
-            <p className="text-gray-500 text-sm mb-6">Versi 1.0.0</p>
+            <p className="text-gray-500 text-sm mb-6">Versi 1.4.0</p>
 
-            <p className="text-gray-700 leading-relaxed text-base sm:text-[1rem] mb-6">
-              <span className="font-semibold text-indigo-700">Al-Qur’an Digital Nusantara</span>{" "}
-              membantu umat Islam membaca, memahami, dan menghafal Al-Qur’an dengan tampilan yang
-              bersih, ringan, serta mudah digunakan. Didesain agar nyaman dilihat dan mudah dipahami,
-              bahkan oleh pengguna baru.
-            </p>
+<p className="text-gray-700 leading-relaxed text-base sm:text-[1rem] mb-6 text-justify indent-8">
+  <span className="font-semibold text-indigo-700">Al-Qur’an Digital Nusantara</span>{" "}
+  membantu umat Islam membaca, memahami, dan menghafal Al-Qur’an dengan tampilan yang
+  bersih, ringan, serta mudah digunakan. Didesain agar nyaman dilihat dan mudah dipahami,
+  bahkan oleh pengguna baru.
+</p>
+
 
             <div className="mt-6 p-4 rounded-xl bg-indigo-50 border border-indigo-100 text-gray-700 shadow-inner">
               <p className="text-sm sm:text-base leading-relaxed">
@@ -95,7 +96,7 @@ export default function Tentang() {
                   <Globe className="w-4 h-4" />
                   Layanan Nusantara
                 </Link>{" "}
-                — Tahun 2025.
+                — 2025.
               </p>
             </div>
 
