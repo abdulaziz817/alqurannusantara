@@ -68,35 +68,33 @@ export default function Tentang() {
               duration: 0.9,
               ease: [0.16, 1, 0.3, 1], // iOS feel
             }}
-            className="bg-white/80 backdrop-blur-xl shadow-2xl rounded-3xl p-8 sm:p-10 max-w-md w-full border border-indigo-100 mt-16"
+            className="relative z-10 bg-white/80 backdrop-blur-xl shadow-2xl rounded-3xl p-8 sm:p-10 max-w-md w-full border border-indigo-100 mt-16"
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-indigo-700 mb-3">
               Tentang Aplikasi
             </h1>
-            <p className="text-gray-500 text-sm mb-6">Versi 1.4.0</p>
+            <p className="text-gray-500 text-sm mb-6">Versi 1.4.2</p>
 
-<p className="text-gray-700 leading-relaxed text-base sm:text-[1rem] mb-6 text-justify indent-8">
-  <span className="font-semibold text-indigo-700">Al-Qur’an Digital Nusantara</span>{" "}
-  membantu umat Islam membaca, memahami, dan menghafal Al-Qur’an dengan tampilan yang
-  bersih, ringan, serta mudah digunakan. Didesain agar nyaman dilihat dan mudah dipahami,
-  bahkan oleh pengguna baru.
-</p>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-[1rem] mb-6 text-justify indent-8">
+              <span className="font-semibold text-indigo-700">Al-Qur’an Digital Nusantara</span>{" "}
+              membantu umat Islam membaca, memahami, dan menghafal Al-Qur’an dengan tampilan yang
+              bersih, ringan, serta mudah digunakan. Didesain agar nyaman dilihat dan mudah dipahami,
+              bahkan oleh pengguna baru.
+            </p>
 
-
-            <div className="mt-6 p-4 rounded-xl bg-indigo-50 border border-indigo-100 text-gray-700 shadow-inner">
-              <p className="text-sm sm:text-base leading-relaxed">
+            <div className="mt-8 p-5 rounded-2xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 shadow-md hover:shadow-lg transition-all duration-300">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed text-center">
                 Dibuat oleh{" "}
-                <span className="font-semibold text-indigo-700">Abdul Aziz</span>,  
-                Founder{" "}
+                <span className="font-semibold text-indigo-700">Abdul Aziz</span> — Founder{" "}
                 <Link
                   href="https://layanannusantara.netlify.app/"
                   target="_blank"
-                  className="text-indigo-600 hover:underline inline-flex items-center gap-1"
+                  className="relative z-10 cursor-pointer text-indigo-600 hover:text-indigo-800 hover:underline inline-flex items-center gap-1 transition-colors duration-300"
                 >
-                  <Globe className="w-4 h-4" />
+                  <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                   Layanan Nusantara
                 </Link>{" "}
-                — 2025.
+                <span className="text-gray-500">© 2025</span>
               </p>
             </div>
 
