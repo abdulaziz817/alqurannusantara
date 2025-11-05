@@ -15,16 +15,22 @@ export default function Tentang() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-indigo-50 to-white flex flex-col items-center justify-center px-6 py-10 text-center relative font-sans overflow-hidden will-change-transform">
 
-      {/* Tombol Kembali */}
-      <div className="absolute top-8 left-6 animate-fadeIn">
-        <Link
-          href="/home"
-          className="flex items-center gap-2 bg-white/80 border border-indigo-100 shadow-sm px-4 py-2 rounded-full hover:bg-indigo-100/80 transition-all duration-300"
-        >
-          <ArrowLeft className="w-5 h-5 text-indigo-600" />
-          <span className="text-sm font-medium text-indigo-700">Kembali</span>
-        </Link>
-      </div>
+{/* Tombol Kembali */}
+<div className="absolute top-8 left-6 animate-fadeIn z-50">
+  <Link href="/home">
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="group flex items-center gap-2 bg-white/70 backdrop-blur-md border border-indigo-100 shadow-md px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-all duration-300"
+    >
+      <ArrowLeft className="w-5 h-5 text-indigo-600 group-hover:text-white transition-colors duration-300" />
+      <span className="text-sm font-medium text-indigo-700 group-hover:text-white transition-colors duration-300">
+        Kembali
+      </span>
+    </motion.button>
+  </Link>
+</div>
+
 
       {/* Konten */}
       <AnimatePresence mode="wait">
@@ -64,7 +70,7 @@ export default function Tentang() {
             <h1 className="text-3xl sm:text-4xl font-bold text-indigo-700 mb-3">
               Tentang Aplikasi
             </h1>
-            <p className="text-gray-500 text-sm mb-6">Versi 1.4.8</p>
+            <p className="text-gray-500 text-sm mb-6">Versi 1.4.9</p>
 
             <p className="text-gray-700 leading-relaxed text-base sm:text-[1rem] mb-6 text-justify indent-8">
               <span className="font-semibold text-indigo-700">Al-Qur’an Digital Nusantara</span>{" "}
