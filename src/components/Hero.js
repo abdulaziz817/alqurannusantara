@@ -7,6 +7,7 @@ export default function Hero() {
   const [showPopup, setShowPopup] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
+  // Kata-kata tema Al-Qur'an Digital
   const words = [
     "Baca Al-Qur’an di mana saja",
     "Kapan saja tanpa ribet",
@@ -14,6 +15,7 @@ export default function Hero() {
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
+  // Ganti kata setiap 3 detik
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
@@ -29,21 +31,20 @@ export default function Hero() {
 
   return (
     <div className="font-sans relative overflow-hidden">
-      {/* Background lembut */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-white" />
+      {/* Background soft gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white"></div>
 
-      {/* Konten utama */}
+      {/* Hero Content */}
       <div className="relative z-10 pt-32 pb-24 text-gray-800 sm:pt-36 md:pt-44">
         <div className="text-center max-w-3xl mx-auto px-6">
-          
-          {/* Judul utama */}
+          {/* Judul */}
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight"
+            className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-indigo-400"
           >
-            Al-Qur’an <span className="text-gray-900">Digital</span>
+            Al-Qur’an Digital
           </motion.h1>
 
           {/* Teks berganti */}
@@ -59,37 +60,37 @@ export default function Hero() {
               {words[currentWordIndex]} 📖
             </motion.p>
           </AnimatePresence>
+{/* Search Box */}
+<motion.div
+  initial={{ opacity: 0, y: 25 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+  className="bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg p-3 mb-8 border border-gray-100 hover:shadow-xl transition-all duration-500"
+>
+  <div className="flex items-center gap-2 w-full">
+    <motion.input
+      whileFocus={{ scale: 1.02 }}
+      type="text"
+      placeholder="🔍  Ketik surah yang ingin dicari..."
+      value={searchValue}
+      onChange={(e) => setSearchValue(e.target.value)}
+      className="flex-1 px-3 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 text-gray-800 placeholder-gray-400 transition-all duration-300 bg-white shadow-sm min-w-0"
+    />
 
-          {/* Kotak pencarian */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-3 mb-8 border border-gray-100 hover:shadow-lg transition-all duration-500"
-          >
-            <div className="flex items-center gap-2">
-              <motion.input
-                whileFocus={{ scale: 1.02 }}
-                type="text"
-                placeholder="🔍  Ketik surah yang ingin dicari..."
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-                className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 text-gray-800 placeholder-gray-400 transition-all duration-300 bg-white shadow-sm"
-              />
+    <motion.button
+      onClick={handleSearch}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: 'spring', stiffness: 250 }}
+      className="px-4 sm:px-6 py-3 bg-indigo-500 text-white rounded-xl font-medium shadow-md hover:bg-indigo-600 hover:shadow-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+    >
+      Cari
+    </motion.button>
+  </div>
+</motion.div>
 
-              <motion.button
-                onClick={handleSearch}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 250 }}
-                className="bg-indigo-500 text-white px-5 py-3 rounded-xl font-medium shadow-md hover:bg-indigo-600 hover:shadow-lg transition-all duration-300"
-              >
-                Cari
-              </motion.button>
-            </div>
-          </motion.div>
 
-          {/* Link cepat */}
+          {/* Link Cepat */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
